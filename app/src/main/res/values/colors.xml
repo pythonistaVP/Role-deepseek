@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="splash_background">#0B1020</color>
+    <color name="splash_background_light">#F4F6FF</color>
+    <color name="window_background">#0B1020</color>
+    <color name="window_background_light">#F4F6FF</color>
+    <color name="launcher_background">#101A38</color>
+    <color name="brand_indigo">#4F5BD5</color>
+    <color name="brand_cyan">#22D3EE</color>
+</resources>

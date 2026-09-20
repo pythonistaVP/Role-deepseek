@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Что FileProvider разрешено отдавать другим приложениям.
+    ВАЖНО: путь должен быть в списке, иначе FileProvider.getUriForFile бросает
+    IllegalArgumentException «Failed to find configured root» и приложение падает.
+-->
+<paths>
+    <!-- Файлы для «Поделиться» (.json карточки) -->
+    <files-path name="files_share" path="share/" />
+    <cache-path name="cache_share" path="share/" />
+    <external-files-path name="external_share" path="share/" />
+
+    <!-- Кадр с камеры до обрезки: cacheDir/camera/... -->
+    <cache-path name="camera" path="camera/" />
+    <!-- Результат обрезки uCrop: cacheDir/crop/... -->
+    <cache-path name="crop" path="crop/" />
+</paths>

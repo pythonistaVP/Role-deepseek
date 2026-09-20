@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Русская локализация — по умолчанию (values/) -->
+<resources>
+    <string name="app_name">Role DeepSeek</string>
+
+    <!-- Общее -->
+    <string name="action_ok">ОК</string>
+    <string name="action_cancel">Отмена</string>
+    <string name="action_save">Сохранить</string>
+    <string name="action_delete">Удалить</string>
+    <string name="action_delete_forever">Удалить навсегда</string>
+    <string name="action_edit">Редактировать</string>
+    <string name="action_share">Поделиться</string>
+    <string name="action_export">Экспорт .json</string>
+    <string name="action_import">Импорт .json</string>
+    <string name="action_duplicate">Дублировать</string>
+    <string name="action_copy">Копировать</string>
+    <string name="action_close">Закрыть</string>
+    <string name="action_back">Назад</string>
+    <string name="action_rename">Переименовать</string>
+    <string name="action_remove">Убрать</string>
+    <string name="action_apply">Применить</string>
+    <string name="action_reset">Сбросить</string>
+    <string name="action_select_all">Выбрать все</string>
+    <string name="action_clear_selection">Снять выбор</string>
+    <string name="action_retry">Повторить</string>
+    <string name="action_done">Готово</string>
+    <string name="action_create">Создать</string>
+    <string name="action_view">Открыть</string>
+    <string name="action_yes">Да</string>
+    <string name="action_no">Нет</string>
+    <string name="action_more">Ещё</string>
+    <string name="selected_count">Выбрано: %1$d</string>
+
+    <!-- Главный экран -->
+    <string name="library_title">Библиотека персонажей</string>
+    <string name="library_search_hint">Поиск по имени, тегам, промпту…</string>
+    <string name="library_import_button">Импорт .json</string>
+    <string name="library_create_character">Новый персонаж</string>
+    <string name="library_empty_title">Здесь пока пусто</string>
+    <string name="library_empty_description">Создайте первого персонажа: имя, аватар и промпт — всё, что нужно для ролевой игры в DeepSeek.</string>
+    <string name="library_empty_search_title">Ничего не найдено</string>
+    <string name="library_empty_search_description">Попробуйте изменить запрос или сбросить фильтры.</string>
+    <string name="library_result_count">Найдено: %1$d</string>
+    <string name="library_filter_all">Все</string>
+    <string name="library_filter_pinned">Закреплённые</string>
+    <string name="library_sort_label">Сортировка</string>
+    <string name="library_sort_date">По дате</string>
+    <string name="library_sort_name">По имени</string>
+    <string name="library_sort_pinned">По закреплённым</string>
+    <string name="library_sort_usage">По частоте использования</string>
+    <string name="library_menu_select">Массовый выбор</string>
+    <string name="library_bulk_delete_title">Удалить персонажей?</string>
+    <string name="library_bulk_delete_message">Будет удалено персонажей: %1$d. Действие необратимо.</string>
+    <string name="library_bulk_export">Экспорт выбранных</string>
+    <string name="library_bulk_move">В папку…</string>
+
+    <string name="card_start_chat">Начать чат</string>
+    <string name="card_pinned">Закреплён</string>
+    <string name="card_pin">Закрепить</string>
+    <string name="card_unpin">Открепить</string>
+    <string name="card_move">Переместить в папку</string>
+    <string name="card_no_prompt">Промпт не заполнен</string>
+
+    <!-- Редактор -->
+    <string name="editor_title_create">Новый персонаж</string>
+    <string name="editor_title_edit">Редактор персонажа</string>
+    <string name="editor_avatar">Аватар</string>
+    <string name="editor_pick_gallery">Выбрать из галереи</string>
+    <string name="editor_crop_title">Обрезка аватара</string>
+    <string name="editor_name">Имя</string>
+    <string name="editor_name_hint">Например: Детектив Нуар</string>
+    <string name="editor_prompt">Промпт персонажа</string>
+    <string name="editor_prompt_hint">Опишите характер, манеру речи, правила поведения и мир персонажа…</string>
+    <string name="editor_greeting">Приветственное сообщение</string>
+    <string name="editor_greeting_hint">Первая фраза, которую персонаж «произносит» в начале чата</string>
+    <string name="editor_tags">Теги</string>
+    <string name="editor_tags_hint">Введите тег и нажмите Enter</string>
+    <string name="editor_folder">Папка</string>
+    <string name="editor_folder_none">Без папки</string>
+    <string name="editor_folder_new">Новая папка…</string>
+    <string name="editor_folder_new_hint">Название папки</string>
+    <string name="editor_temperature">Температура</string>
+    <string name="editor_temperature_desc">Ниже — точнее и стабильнее, выше — креативнее и непредсказуемее</string>
+    <string name="editor_top_p">Top-P (nucleus sampling)</string>
+    <string name="editor_note">Заметка автора</string>
+    <string name="editor_note_hint">Только для вас: идеи, сюжетные зацепки, напоминания</string>
+    <string name="editor_visibility">Видимость</string>
+    <string name="editor_visibility_public">Публичный</string>
+    <string name="editor_visibility_private">Приватный</string>
+    <string name="editor_visibility_desc">Приватные персонажи не попадают в экспорт «поделиться», но сохраняются в резервной копии.</string>
+    <string name="editor_templates">Шаблоны промпта</string>
+    <string name="editor_symbols">%1$d символов</string>
+    <string name="editor_autosaved">Черновик сохранён</string>
+    <string name="editor_saved">Персонаж сохранён</string>
+    <string name="editor_name_required">Укажите имя персонажа</string>
+    <string name="editor_prompt_required">Промпт не может быть пустым</string>
+    <string name="editor_delete_title">Удалить персонажа?</string>
+    <string name="editor_delete_message">«%1$s» будет удалён без возможности восстановления.</string>
+    <string name="editor_unsaved_title">Выйти без сохранения?</string>
+    <string name="editor_unsaved_message">В форме есть несохранённые изменения.</string>
+    <string name="editor_qr">QR-код</string>
+    <string name="editor_qr_title">QR персонажа</string>
+    <string name="editor_qr_description">Сжатая копия карточки. Отсканируйте камерой другого телефона и импортируйте текстом.</string>
+    <string name="editor_qr_failed">Не удалось построить QR-код: карточка слишком большая</string>
+
+    <!-- Просмотр персонажа -->
+    <string name="detail_title">Персонаж</string>
+    <string name="detail_prompt">Промпт</string>
+    <string name="detail_greeting">Приветствие</string>
+    <string name="detail_note">Заметка</string>
+    <string name="detail_stats">Статистика использования</string>
+    <string name="detail_stat_chats">Запусков чата</string>
+    <string name="detail_stat_copies">Копирований</string>
+    <string name="detail_stat_views">Просмотров</string>
+    <string name="detail_stat_edits">Редактирований</string>
+    <string name="detail_created">Создан</string>
+    <string name="detail_updated">Изменён</string>
+    <string name="detail_copied">Промпт скопирован в буфер обмена</string>
+    <string name="detail_stat_last_used">Последний запуск</string>
+
+    <!-- Запуск чата -->
+    <string name="chat_title">Запуск чата</string>
+    <string name="chat_prompt_preview">Итоговый промпт</string>
+    <string name="chat_ready_title">Промпт готов</string>
+    <string name="chat_copied_dialog_title">Промпт «%1$s» скопирован в буфер обмена</string>
+    <string name="chat_copied_dialog_message">Открыть DeepSeek и вставить?</string>
+    <string name="chat_open_deepseek">Открыть DeepSeek</string>
+    <string name="chat_copy_prompt">Копировать промпт</string>
+    <string name="chat_copy_greeting">Копировать только приветствие</string>
+    <string name="chat_share_prompt">Поделиться промптом</string>
+    <string name="chat_snackbar_copied">Промпт в буфере. В чате DeepSeek: долгое нажатие → «Вставить».</string>
+    <string name="chat_snackbar_action">Показать буфер</string>
+    <string name="chat_clipboard_preview">В буфере обмена: %1$s</string>
+    <string name="chat_app_not_found">Приложение DeepSeek не найдено — открываю сайт</string>
+    <string name="chat_open_failed">Не удалось открыть DeepSeek. Скопируйте промпт и откройте приложение вручную.</string>
+    <string name="chat_overlay_title">Плавающая подсказка</string>
+    <string name="chat_overlay_description">Если включить, поверх DeepSeek появится небольшая подсказка «нажмите и удерживайте → Вставить». Нужно разрешение «Поверх других окон» — подсказка исчезнет сама через несколько секунд и ничего не сохраняет.</string>
+    <string name="chat_overlay_grant">Разрешить и показать</string>
+    <string name="chat_overlay_denied">Разрешение не выдано — подсказка недоступна</string>
+    <string name="chat_steps_title">Как это работает</string>
+    <string name="chat_step_1">Промпт копируется в буфер обмена.</string>
+    <string name="chat_step_2">Приложение открывает DeepSeek.</string>
+    <string name="chat_step_3">В поле ввода: долгое нажатие → «Вставить» → отправить.</string>
+    <string name="chat_usage_recorded">Запуск сохранён в статистике</string>
+
+    <!-- Папки -->
+    <string name="folders_title">Папки</string>
+    <string name="folders_empty">Папок пока нет. Создайте папку, чтобы разложить персонажей по категориям.</string>
+    <string name="folders_new">Новая папка</string>
+    <string name="folders_name_hint">Название</string>
+    <string name="folders_color">Цвет</string>
+    <string name="folders_icon">Иконка</string>
+    <string name="folders_delete_title">Удалить папку?</string>
+    <string name="folders_delete_message">Персонажи из «%1$s» останутся в библиотеке, но без папки.</string>
+    <string name="folders_rename_title">Переименовать папку</string>
+    <string name="folders_characters_count">Персонажей: %1$d</string>
+    <string name="folders_drag_hint">Перетащите карточку персонажа на папку, чтобы переместить его.</string>
+    <string name="folders_drop_here">Отпустите здесь</string>
+    <string name="folders_moved">Персонаж перемещён в «%1$s»</string>
+    <string name="folders_unfiled">Без папки</string>
+
+    <!-- Настройки -->
+    <string name="settings_title">Настройки</string>
+    <string name="settings_appearance">Оформление</string>
+    <string name="settings_theme">Тема</string>
+    <string name="settings_theme_system">Системная</string>
+    <string name="settings_theme_light">Светлая</string>
+    <string name="settings_theme_dark">Тёмная</string>
+    <string name="settings_theme_dynamic">Material You</string>
+    <string name="settings_theme_dynamic_desc">Цвета обоев (Android 12+)</string>
+    <string name="settings_language">Язык</string>
+    <string name="settings_language_system">Системный</string>
+    <string name="settings_language_ru">Русский</string>
+    <string name="settings_language_en">English</string>
+    <string name="settings_interface">Интерфейс</string>
+    <string name="settings_grid_columns">Колонок в сетке</string>
+    <string name="settings_overlay_hint">Плавающая подсказка при запуске чата</string>
+    <string name="settings_motion">Анимации переходов</string>
+    <string name="settings_data">Данные</string>
+    <string name="settings_export_backup">Экспорт всей библиотеки</string>
+    <string name="settings_export_backup_desc">Один .json со всеми персонажами, папками и настройками</string>
+    <string name="settings_import_backup">Импорт резервной копии</string>
+    <string name="settings_import_backup_desc">Заменить текущую библиотеку или объединить с ней</string>
+    <string name="settings_import_mode_title">Как импортировать?</string>
+    <string name="settings_import_replace">Заменить всё</string>
+    <string name="settings_import_merge">Объединить</string>
+    <string name="settings_clear_cache">Очистить кэш изображений</string>
+    <string name="settings_clear_cache_done">Кэш очищен (%1$s)</string>
+    <string name="settings_reset">Сброс к настройкам по умолчанию</string>
+    <string name="settings_reset_title">Сбросить настройки?</string>
+    <string name="settings_reset_message">Персонажи и папки сохранятся, сбросятся только тема, язык и параметры интерфейса.</string>
+    <string name="settings_stats">Статистика</string>
+    <string name="settings_stat_characters">Персонажей</string>
+    <string name="settings_stat_folders">Папок</string>
+    <string name="settings_stat_chats">Запусков чата</string>
+    <string name="settings_stat_avatars">Аватаров</string>
+    <string name="settings_stat_db_size">Размер базы</string>
+    <string name="settings_stat_actions">Всего действий</string>
+    <string name="settings_stat_pinned">Закреплённых</string>
+    <string name="settings_about">О приложении</string>
+    <string name="settings_about_version">Версия %1$s (сборка %2$d)</string>
+    <string name="settings_about_author">Автор: pythonistaVP</string>
+    <string name="settings_about_repo">Репозиторий проекта</string>
+    <string name="settings_about_author_link">Профиль автора на GitHub</string>
+    <string name="settings_about_license">Лицензия MIT</string>
+    <string name="settings_about_license_desc">Код открыт: используйте, изменяйте и распространяйте свободно.</string>
+    <string name="settings_star">Поставить звезду репозиторию</string>
+    <string name="settings_star_desc">https://github.com/pythonistaVP/Role-deepseek</string>
+    <string name="settings_privacy">Данные не покидают устройство: библиотека хранится только локально.</string>
+    <string name="settings_analytics">Локальная статистика</string>
+    <string name="settings_analytics_desc">Считаем запуски чатов и копирования на устройстве. Ничего не отправляется в сеть.</string>
+    <string name="settings_clear_analytics">Очистить статистику</string>
+    <string name="settings_analytics_cleared">Статистика очищена</string>
+    <string name="settings_reset_done">Настройки сброшены</string>
+
+    <!-- Импорт / экспорт -->
+    <string name="import_success">Импортировано персонажей: %1$d</string>
+    <string name="import_success_skipped">Импортировано: %1$d, пропущено: %2$d</string>
+    <string name="import_error_not_json">Файл не похож на JSON-карточку</string>
+    <string name="import_error_unknown_format">Неизвестный формат карточки. Поддерживаются Role DeepSeek, SillyTavern и Character.AI.</string>
+    <string name="import_error_empty">В файле нет ни одного персонажа</string>
+    <string name="import_error_read">Не удалось прочитать файл</string>
+    <string name="import_from_clipboard">Вставить из буфера обмена</string>
+    <string name="export_success">Файл сохранён: %1$s</string>
+    <string name="export_error">Не удалось сохранить файл</string>
+    <string name="backup_success">Резервная копия сохранена: %1$s</string>
+    <string name="backup_import_result">Из бэкапа: добавлено %1$d, обновлено %2$d, папок %3$d</string>
+    <string name="share_character_title">Поделиться персонажем</string>
+    <string name="share_choose">Что отправить?</string>
+    <string name="share_as_text">Текст с промптом</string>
+    <string name="share_as_file">Файл .json</string>
+    <string name="share_via">Поделиться через…</string>
+    <string name="share_footer">Отправлено из Role DeepSeek — https://github.com/pythonistaVP/Role-deepseek</string>
+
+    <!-- Уведомления / тосты -->
+    <string name="toast_pinned">Закреплено</string>
+    <string name="toast_unpinned">Откреплено</string>
+    <string name="toast_duplicated">Создана копия «%1$s»</string>
+    <string name="toast_deleted">Удалено</string>
+    <string name="toast_copied">Скопировано</string>
+    <string name="toast_nothing_selected">Ничего не выбрано</string>
+    <string name="toast_folder_created">Папка «%1$s» создана</string>
+    <string name="toast_folder_exists">Папка «%1$s» уже есть</string>
+    <string name="toast_copied_to_clipboard">Скопировано в буфер обмена</string>
+
+    <!-- Виджет -->
+    <string name="widget_label">Любимый персонаж</string>
+    <string name="widget_description">Быстрый запуск чата с любимым персонажем</string>
+    <string name="widget_empty">Выберите любимого персонажа в приложении</string>
+    <string name="widget_pick">Выбрать персонажа</string>
+    <string name="widget_launch">Начать чат</string>
+
+    <!-- Уведомление-подсказка -->
+    <string name="overlay_hint_text">Вставьте промпт: нажмите и удерживайте поле ввода → «Вставить»</string>
+    <string name="overlay_channel_name">Подсказка для вставки</string>
+
+    <!-- Шаблоны промптов -->
+    <string name="template_assistant">Ты — %1$s, вежливый и эрудированный ассистент.</string>
+    <string name="template_rpg">Ты ведёшь текстовую ролевую игру. Твой персонаж:\nИмя: %1$s\nХарактер: \nМанера речи: \nМир: \nОтвечай только от лица персонажа, не выходи из роли.</string>
+    <string name="template_tutor">Ты — терпеливый наставник. Объясняй простыми словами, приводи примеры, задавай проверочные вопросы.</string>
+    <string name="template_detective">Ты — детектив. Отвечай короткими фактами, задавай уточняющие вопросы, строй версии и отмечай противоречия.</string>
+    <string name="template_universe">Опиши вымышленный мир. Ты хранишь его правила и не нарушаешь их: география, культура, магия/технологии, конфликты, история.</string>
+
+    <!-- Beta-метка и «Что нового» -->
+    <string name="app_beta">beta</string>
+    <string name="settings_changelog">Что нового</string>
+    <string name="settings_changelog_version">Версия %1$s</string>
+    <string name="changelog_110_fix_photo">Исправлено падение приложения при добавлении фото — и из галереи, и с камеры</string>
+    <string name="changelog_110_perf">Новый раздел «Производительность»: три профиля и ползунки качества, кэшей и статистики</string>
+    <string name="changelog_110_avatars">Аватары: системный выбор фото без разрешений, съёмка на камеру, защита от нехватки памяти на больших снимках</string>
+    <string name="changelog_110_speed">Списки стали плавнее: поиск ушёл в фоновый поток, картинки грузятся уменьшенными</string>
+    <string name="changelog_110_draft">Черновик нового персонажа сохраняется, даже если сразу выйти с экрана</string>
+    <string name="changelog_110_stability">Плавающая подсказка и виджет стали надёжнее: добавлены обязательные разрешения и защита от переполнения</string>
+    <string name="changelog_100_first">Первый публичный выпуск: библиотека, редактор, папки, запуск чата, импорт и экспорт карточек, виджет</string>
+
+    <!-- Производительность -->
+    <string name="settings_perf">Производительность</string>
+    <string name="settings_perf_desc">Как приложение расходует память, батарею и место на диске. На слабом телефоне выберите профиль «Экономия».</string>
+    <string name="settings_perf_preset">Профиль</string>
+    <string name="settings_perf_preset_desc">Профиль выставляет все значения сразу — потом любой ползунок можно подправить вручную.</string>
+    <string name="settings_perf_preset_quality">Качество</string>
+    <string name="settings_perf_preset_balanced">Баланс</string>
+    <string name="settings_perf_preset_battery">Экономия</string>
+    <string name="settings_perf_preset_applied">Профиль «%1$s» применён</string>
+    <string name="settings_perf_avatar_px">Разрешение аватаров</string>
+    <string name="settings_perf_avatar_px_value">%1$d px</string>
+    <string name="settings_perf_avatar_quality">Качество сохранения (JPEG)</string>
+    <string name="settings_perf_avatar_quality_value">%1$d %%</string>
+    <string name="settings_perf_thumbnails">Уменьшать аватары в списках</string>
+    <string name="settings_perf_thumbnails_desc">Главная экономия памяти: картинка грузится под размер карточки</string>
+    <string name="settings_perf_blur_hash">Размытые подложки (blurhash)</string>
+    <string name="settings_perf_blur_hash_desc">Мягкий фон, пока грузится аватар. Выключите для экономии процессора</string>
+    <string name="settings_perf_crossfade">Плавное появление картинок</string>
+    <string name="settings_perf_memory_cache">Кэш картинок в памяти</string>
+    <string name="settings_perf_memory_cache_value">%1$d %%</string>
+    <string name="settings_perf_disk_cache">Дисковый кэш картинок</string>
+    <string name="settings_perf_disk_cache_value">%1$d МБ</string>
+    <string name="settings_perf_caches_desc">Новый размер кэша применяется сразу — загрузчик картинок пересобирается на ходу.</string>
+    <string name="settings_perf_analytics">Локальная статистика</string>
+    <string name="settings_perf_analytics_desc">Считать запуски чатов и копирования. Выключите, чтобы лишний раз не писать в базу</string>
+    <string name="settings_perf_analytics_off_hint">Статистика выключена — счётчики не обновляются.</string>
+    <string name="settings_grid_columns_value">%1$d</string>
+    <string name="settings_clear_cache_desc">Удаляется только кэш картинок — аватары персонажей остаются на месте</string>
+    <string name="settings_reset_desc">Вернуть тему, язык и настройки производительности по умолчанию. Персонажи не удаляются</string>
+    <string name="settings_stat_avatar_size">Вес аватаров</string>
+
+    <!-- Beta-подпись в «О приложении» -->
+    <string name="settings_about_beta_title">Это beta-версия</string>
+    <string name="settings_about_beta_text">Это приложение писал ИИ и я, так как это мой 3-й проект по такой тематике (APK). Дальше буду обучаться по видео с YouTube, на крайняк возьму обучающий курс. Если что-то сломалось — напишите: багов ещё много, и я их нахожу и правлю.</string>
+
+    <!-- Редактор: работа с картинкой -->
+    <string name="editor_pick_camera">Снять на камеру</string>
+    <string name="editor_paste">Вставить</string>
+    <string name="editor_clipboard_empty">В буфере обмена нет текста</string>
+    <string name="editor_avatar_failed">Не удалось обработать картинку. Попробуйте другую</string>
+    <string name="editor_crop_unavailable">Не удалось открыть экран обрезки — картинка сохранена как есть</string>
+    <string name="editor_template_fallback_name">персонаж</string>
+</resources>

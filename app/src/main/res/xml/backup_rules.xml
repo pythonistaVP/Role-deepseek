@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Правила автобэкапа Android (до Android 12) -->
+<full-backup-content>
+    <include domain="database" path="." />
+    <include domain="file" path="." />
+    <include domain="sharedpref" path="." />
+    <exclude domain="file" path="share/" />
+    <exclude domain="file" path="avatar_cache/" />
+</full-backup-content>

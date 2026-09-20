@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Сеть нужна только для отображения аватаров по URL (Coil) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--
+        Разрешения на чтение галереи (READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE)
+        намеренно НЕ запрашиваются: фото выбирает системный выбор изображений через
+        ActivityResultContracts.PickVisualMedia, ему такие разрешения не нужны.
+        Меньше разрешений — меньше диалогов и меньше поводов для отказа в установке.
+    -->
+    <!--
+        Опциональная плавающая подсказка «вставьте промпт» поверх DeepSeek —
+        это foreground-сервис, поэтому нужны три разрешения:
+          • FOREGROUND_SERVICE — обязательно с Android 9 (API 28): без него
+            startForegroundService падает с SecurityException;
+          • SYSTEM_ALERT_WINDOW — собственно окно поверх других приложений;
+          • POST_NOTIFICATIONS (13+) — чтобы было видно тихое уведомление сервиса.
+    -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="false" />
+
+    <!-- Видимость сторонних приложений (проверяем, установлен ли DeepSeek) -->
+    <queries>
+        <package android:name="com.deepseek.chat" />
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".RoleDeepSeekApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:localeConfig="@xml/locales_config"
+        android:enableOnBackInvokedCallback="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RoleDeepSeek"
+        tools:targetApi="34">
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|uiMode"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.RoleDeepSeek.Splash"
+            android:windowSoftInputMode="adjustResize">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- Позволяет делиться текстом в приложение (создать персонажа из промпта) -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+
+        <!-- Виджет рабочего стола: быстрый запуск любимого персонажа -->
+        <receiver
+            android:name=".widget.FavoriteCharacterWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.pythonistavp.roledeepseek.widget.REFRESH" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/favorite_widget_info" />
+        </receiver>
+
+        <!--
+            ⚠ Экран обрезки аватара из библиотеки uCrop.
+            В AAR-манифесте uCrop этот activity НЕ объявлен (проверено: там только
+            uses-sdk), а без записи здесь startActivity падает с
+            ActivityNotFoundException — приложение вылетает сразу после выбора фото.
+            Тема обязана быть AppCompat-овской: UCropActivity наследует
+            androidx.appcompat.app.AppCompatActivity.
+        -->
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <!--
+            Плавающая подсказка (только при выданном разрешении).
+            ⚠ foregroundServiceType обязателен с Android 14 (API 34): без него
+            startForeground() бросает MissingForegroundServiceTypeException.
+            shortService — ровно наш случай: короткая задача по действию
+            пользователя (подсказка живёт 9 секунд), отдельного разрешения не просит.
+        -->
+        <service
+            android:name=".service.FloatingHintService"
+            android:exported="false"
+            android:foregroundServiceType="shortService" />
+
+        <!-- Отдача .json-файлов в «Поделиться» -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- Хранение выбранного языка приложения (для Android < 13) -->
+        <service
+            android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
+            android:enabled="false"
+            android:exported="false">
+            <meta-data
+                android:name="autoStoreLocales"
+                android:value="true" />
+        </service>
+    </application>
+</manifest>
